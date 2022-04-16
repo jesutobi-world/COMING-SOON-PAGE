@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* I'll be trying the mobile-first styling for the first time here */
+
+/* Devices with widths less than or equal to 768px */
+body{
+    position: relative;
+    font-family: 'Libre Franklin', sans-serif;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+#page-1{
+    position: absolute;
+    padding: 6vw;
+    height: 220vw;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 2.5fr 1.5fr 1fr;
+    grid-row-gap: 3vw;
+}
+#page-2{   
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.container{
+    height: 80%;
+    width: 70%;
+    border-radius: 4vw;
+    border: 3px solid hsl(223, 100%, 88%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 6vw;
+    justify-content: space-evenly;
+}
+.container .text-section{
+    display: flex;
+    flex-direction: column;
+    height: 45%;
+    justify-content: space-around;
+}
+.text-section h1{
+    padding: 0 5vw;
+    font-size: 7vw;
+}
+.text-section p{
+    font-size: 5vw;
+    color: hsl(0, 0%, 59%);
+}
+.container hr{
+    color: black;
+    height: 2px;
+    background-color: black;
+    border: none;
+}
+.container .social-section{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.social-section p{
+    color: hsl(223, 87%, 63%);
+    font-size: 5vw;
+}
+.social-section .icon-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.icon-section .fab{
+    height: 10vw;
+    width: 10vw;
+    border-radius: 2vw;
+    border: 2px solid hsl(223, 87%, 63%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+    color: hsl(223, 87%, 63%);
+    cursor: pointer;
+}
+#dashboard{
+    height: 100%;
+    width: 100%;
+    padding-bottom: 10vw;
+}
+
+#row-1{
+    display: grid;
+    grid-template-rows: 1fr 2fr 3fr;
+    margin-bottom: 10vw;
+}
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo img{
+    height: 6vw;
+    width: 22vw;
+}
+.text-area{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.text-area h1{
+    font-size: 7vw;
+    font-weight: 300;
+    color: hsl(0, 0%, 59%);
+}
+.text-area span{
+    color: hsl(209, 33%, 12%);
+    font-weight: 700;
+}
+.text-area h3{
+    font-size: 4.5vw;
+    font-weight: 600;
+    color: hsl(209, 33%, 12%);
+}
+.input-button{
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: stretch;
+}
+.input-button input{
+    width: 100%;
+    height: 12vw;
+    border-radius: 6vw;
+    border: 1px solid hsl(223, 100%, 88%);
+    outline: none;
+    padding-left: 6vw;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 4.5vw;
+    margin-top: 3vw;
+}
+::placeholder{
+    color: hsl(223, 100%, 88%);
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 4.5vw;
+    font-weight: 300;
+}
+.input-button button{
+    width: 100%;
+    height: 12vw;
+    border-radius: 6vw;
+    background-color: hsl(223, 87%, 63%);
+    color: white;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 5vw;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+#email-error{
+    display: grid;
+}
+#error{
+    height: 7vw;
+    font-size: 3.5vw;
+    font-style: italic;
+    text-align: center;
+    color: hsl(354, 100%, 66%);
+    margin-bottom: 5vw;
+    display: none;
+}
+#row-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 5vw;
+    align-items: center;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 6vw;
+}
+.icon i{
+    height: 12vw;
+    width: 12vw;
+    border: 1px solid hsl(0, 0%, 59%);
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    align-items: center;
+    margin-right: 4vw;
+    cursor: pointer;
+    color: hsl(223, 87%, 63%);
+    font-size: 5vw;
+}
+.footer-text p{
+    font-size: 4vw;
+    font-weight: 300;
+    color: hsl(0, 0%, 59%);
+}
+
+/* CSS for Desktops down to Tablets */
+@media (min-width: 600px){
+    body{
+        position: relative;
+        width: 100vw;
+        height: auto;
+    }
+    #page-1{
+        position: absolute;
+        display: grid;
+        height: 100%;
+        grid-template-rows: 7fr 10fr 5fr;
+        padding: 0;
+        grid-row-gap: 0;
+    }
+    #page-2{
+        position: absolute;
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        display: none;
+    }
+    .container{
+        height: 60%;
+        width: 25%;
+        border: 4px solid hsl(223, 100%, 88%);
+        border-radius: 2vw;
+        padding: 0 2vw;
+    }
+    .container .text-section{
+        height: 45%;
+    }
+    .text-section h1{
+        font-size: 2.5vw;
+        padding: 0 0;
+    }
+    .text-section p{
+        font-size: 1.5vw;
+    }
+    .container hr{
+        height: 3px;
+    }
+    .container .social-section{
+        height: 33%;
+        justify-content: space-around;
+    }
+    .social-section p{
+        font-size: 1.7vw;
+        padding-bottom: 2vw;
+    }
+    .social-section .icon-section .fab{
+        height: 3vw;
+        width: 3vw;
+        border-radius: 0.7vw;
+        font-size: 1.5vw;
+    }
+    #row-2{
+        width: 60%;
+        justify-self: center;
+        padding-top: 3vw;
+    }
+    #dashboard{
+        height: 100%;
+    }
+    #row-1{
+        margin-bottom: 0;
+        display: grid;
+        grid-template-rows: 0.8fr 1fr 1fr;
+    }
+    #logo img{
+        height: 2.5vw;
+        width: 8vw;
+    }
+    .text-area h1{
+        font-size: 2.9vw;
+        margin-bottom: 2.5vw;
+    }
+    .text-area h3{
+        font-size: 1.7vw;
+        margin-bottom: 3vw;
+    }
+    #row-3{
+        padding-bottom: 2vw;
+    }
+    .input-button{
+        display: grid;
+        grid-template-columns: 2fr 0.7fr;
+        gap: 3vw;
+        justify-items: normal;
+        padding: 1vw 3vw;
+        width: 50%;
+        justify-self: center;
+    }
+    .input-button input{
+        height: 4vw;
+        font-size: 1.5vw;
+        padding-left: 3vw;
+        margin-top: 0;
+    }
+    #email-error{
+        height: 7.5vw;
+    }
+    .input-button button{
+        height: 4vw;
+        font-size: 1.5vw;
+    }
+    ::placeholder{
+        font-size: 1.3vw;
+    }
+    .icons{
+        width: 30%;
+        justify-content: space-between;
+        margin: 2vw;
+    }
+    .icon i:hover{
+        background-color: hsl(223, 87%, 63%);
+        color: white;
+        border: none;
+    }
+    .icon i{
+        font-size: 1.5vw;
+        height: 4.5vw;
+        width: 4.5vw;
+        margin-right: 0;
+    }
+    .footer-text p{
+        font-size: 1.5vw;
+        margin-top: 2vw;
+    }
+    #error{
+        height: 3.5vw;
+        font-size: 1.2vw;
+        padding-top: 1vw;
+        margin-bottom: 0;
+    }
+}
